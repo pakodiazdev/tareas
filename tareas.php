@@ -1,4 +1,6 @@
 <?php
+include_once "funciones/index.php";
 
+$tareas = datosTareas();
 
-echo "Sistema de Tareas";
+var_dump($tareas);
