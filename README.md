@@ -150,3 +150,17 @@ tareas/
     ├── centrar.php         # Centra texto dentro de un ancho
     └── limpiarPantalla.php # Limpia la consola
 ```
+
+
+# Diagrama ER:
+
+```mermaid
+erDiagram
+    tarea {
+        INT id
+        VARCHAR(100) descripcion
+        TINYINT(1) completada
+
+    }
+
+```
