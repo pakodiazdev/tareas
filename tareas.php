@@ -9,7 +9,7 @@ while($salir == false) {
     switch($opcion) {
         case 1: 
             limpiarPantalla();
-            listarTareas($tareas); 
+            listarTareas(); 
         break;
         case 2: 
             completarTarea($tareas);

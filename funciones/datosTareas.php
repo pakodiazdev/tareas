@@ -1,36 +1,9 @@
 <?php 
 
 function datosTareas() {
-    $tareas = [
-        [
-            'id' => 1, 
-            'descripcion' => 'Estudiar SQL',
-            'completada' => false
-        ],
-        [
-            'id' => 2, 
-            'descripcion' => 
-            'Hacer tarea PHP', 
-            'completada' => true
-        ],
-        [
-            'id' => 3, 
-            'descripcion' => 
-            'Leer clase 20', 
-            'completada' => false
-        ],
-    ];
-
-    $tareas[] = [
-        'id' => 4, 
-        'descripcion' => 'Limpiar Cuarto',
-        'completada' => false
-    ];
-
-    $tareas[] = [
-        'id' => 5, 
-        'descripcion' => 'Alimentar a Solovino',
-        'completada' => false
-    ];
-    return $tareas;
+    $mysqli = mysqli_connect("127.0.0.1", "root", "", "tareas");
+    $consultaSQL = "SELECT * FROM tarea";
+    $result = mysqli_query($mysqli, $consultaSQL);
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $rows;
 }
